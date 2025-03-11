@@ -29,8 +29,6 @@ body:
       label: "Benefit of this Feature"
       description: "How does this feature improve the website?"
       placeholder: "Explain why this feature is useful..."
-    validations:
-      required: true
 
   - type: textarea
     id: additional_info

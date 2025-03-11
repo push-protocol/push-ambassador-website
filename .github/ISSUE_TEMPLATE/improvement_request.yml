@@ -38,8 +38,7 @@ body:
       label: "Benefit of Improvement"
       description: "Why is this improvement necessary?"
       placeholder: "Explain why this should be changed..."
-    validations:
-      required: true
+
 
   - type: textarea
     id: additional_info
