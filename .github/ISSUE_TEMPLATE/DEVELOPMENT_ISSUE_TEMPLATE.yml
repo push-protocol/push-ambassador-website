@@ -1,5 +1,5 @@
 name: "Development Task"
-description: "Template for new development tasks."
+description: "Template for new development tasks with design specifications."
 title: "[Dev] <Short Description of Task>"
 labels: ["development"]
 assignees: []
@@ -48,10 +48,22 @@ body:
         **Element:** [Specific UI element]
         **Description:** [Detailed description of appearance and behavior]
         **Visual Reference:** [Link to design mockups]
+        **Specifications:**
+          - **Color:**
+          - **Typography:**
+          - **Spacing/Padding/Margin:**
+          - **States:**
+          - **Interactions:**
       placeholder: |
         **Element:** Button
         **Description:** Primary call-to-action button with rounded corners.
         **Visual Reference:** [Link to Figma design]
+        **Specifications:**
+          - **Color:** #007bff
+          - **Typography:** Roboto, 16px, Bold
+          - **Spacing:** 10px padding top/bottom, 20px left/right
+          - **States:** Hover: #0056b3
+          - **Interactions:** Animates slightly on hover.
     validations:
       required: false
 
@@ -65,10 +77,12 @@ body:
         **Component/Screen:** [Name of the component or screen]
         **Layout:** [Describe the overall arrangement]
         **Grid System:** [Specify grid details]
+        **Responsiveness:** [Outline how it adapts to different screen sizes]
       placeholder: |
         **Component/Screen:** User Profile Page
         **Layout:** Two-column layout with user info on the left and activity feed on the right.
         **Grid System:** 12-column grid, left column spans 4, right spans 8.
+        **Responsiveness:** Stack columns on mobile.
     validations:
       required: false
 
