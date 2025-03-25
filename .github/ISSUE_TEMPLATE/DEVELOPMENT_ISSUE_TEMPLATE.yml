@@ -1,124 +1,52 @@
-name: "Development Task"
-description: "Template for new development tasks with design specifications."
-title: "[Dev] <Short Description of Task>"
-labels: ["development"]
+name: Feature Request / Task
+description: Describe a feature or task for contributors to work on.
+title: "[Feature] <Short Description>"
+labels:
+  - enhancement
+  - frontend
+  - backend
 assignees: []
 
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Overview
+        Provide a brief description of the feature or task. Explain its purpose and how it fits into the project.
+  
   - type: input
-    id: task_title
+    id: design_reference
     attributes:
-      label: "Task Title"
-      description: "Provide a concise title for this development task."
-      placeholder: "e.g., Implement User Profile Page"
-    validations:
-      required: true
-
-  - type: select
-    id: project_section
-    attributes:
-      label: "Project/Section"
-      description: "Specify the relevant part of the project or the design section this task pertains to."
-      options:
-        - "UI Components"
-        - "Layout & Structure"
-        - "Interactions & Animations"
-        - "Backend Logic"
-        - "API Integration"
-        - "Other"
-    validations:
-      required: true
+      label: "Design Reference"
+      description: "Attach or link to relevant design files, Figma, or any visual references needed for this feature."
 
   - type: textarea
-    id: description
+    id: requirements
     attributes:
-      label: "Task Description"
-      description: "Provide a clear and detailed description of what needs to be developed and the desired outcome."
-      placeholder: "Explain the task, its purpose, and any relevant background information."
-    validations:
-      required: true
+      label: "Requirements"
+      description: "List specific tasks contributors need to complete. Mention key functionalities and expected behaviors. Highlight dependencies (e.g., API, CMS, or third-party integrations)."
 
   - type: textarea
-    id: design_ui_elements
+    id: technical_notes
     attributes:
-      label: "Design Specifications - UI Elements"
-      description: |
-        Provide detailed specifications for UI elements. Use the following format:
-
-        **Element:** [Specific UI element]
-        **Description:** [Detailed description of appearance and behavior]
-        **Visual Reference:** [Link to design mockups]
-        **Specifications:**
-          - **Color:**
-          - **Typography:**
-          - **Spacing/Padding/Margin:**
-          - **States:**
-          - **Interactions:**
-      placeholder: |
-        **Element:** Button
-        **Description:** Primary call-to-action button with rounded corners.
-        **Visual Reference:** [Link to Figma design]
-        **Specifications:**
-          - **Color:** #007bff
-          - **Typography:** Roboto, 16px, Bold
-          - **Spacing:** 10px padding top/bottom, 20px left/right
-          - **States:** Hover: #0056b3
-          - **Interactions:** Animates slightly on hover.
-    validations:
-      required: false
-
-  - type: textarea
-    id: design_layout_structure
-    attributes:
-      label: "Design Specifications - Layout & Structure"
-      description: |
-        Provide details on the layout and structure. Use the following format:
-
-        **Component/Screen:** [Name of the component or screen]
-        **Layout:** [Describe the overall arrangement]
-        **Grid System:** [Specify grid details]
-        **Responsiveness:** [Outline how it adapts to different screen sizes]
-      placeholder: |
-        **Component/Screen:** User Profile Page
-        **Layout:** Two-column layout with user info on the left and activity feed on the right.
-        **Grid System:** 12-column grid, left column spans 4, right spans 8.
-        **Responsiveness:** Stack columns on mobile.
-    validations:
-      required: false
-
-  - type: textarea
-    id: design_interactions_animations
-    attributes:
-      label: "Design Specifications - Interactions & Animations"
-      description: |
-        Describe any specific interactions and animations. Use the following format:
-
-        **Interaction:** [Specific user interaction]
-        **Description:** [Detail the flow and behavior]
-        **Animation:** [Describe the animation details]
-        **Prototypes:** [Link to interactive prototypes]
-      placeholder: |
-        **Interaction:** Clicking the "Follow" button
-        **Description:** Updates the button state to "Following" and triggers a notification.
-        **Animation:** Button text fades out and "Following" fades in with a slight scale animation.
-        **Prototypes:** [Link to InVision prototype]
-    validations:
-      required: false
+      label: "Technical Notes"
+      description: "Provide any technical guidelines, best practices, or constraints. Specify relevant frameworks, libraries, or tools if necessary."
 
   - type: textarea
     id: acceptance_criteria
     attributes:
       label: "Acceptance Criteria"
-      description: "Define specific and measurable criteria that must be met for this task to be considered complete."
-      placeholder: "- All UI elements match the design specifications.\n- The layout is implemented correctly across all specified breakpoints.\n- Interactions and animations function as described."
-    validations:
-      required: true
+      description: "Define what needs to be done for the task to be considered complete. Include testing or review requirements if applicable."
 
   - type: textarea
     id: additional_notes
     attributes:
       label: "Additional Notes"
-      description: "Include any other relevant information, context, or considerations for the developers."
-      placeholder: "e.g., Consider accessibility guidelines, specific API endpoints to use."
-    validations:
-      required: false
+      description: "Add any extra details or considerations that may help the contributor."
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        > **Note:** Before starting, please discuss in the comments if anything needs clarification.
+
