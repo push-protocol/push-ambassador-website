@@ -1,0 +1,110 @@
+name: "Development Task"
+description: "Template for new development tasks."
+title: "[Dev] <Short Description of Task>"
+labels: ["development"]
+assignees: []
+
+body:
+  - type: input
+    id: task_title
+    attributes:
+      label: "Task Title"
+      description: "Provide a concise title for this development task."
+      placeholder: "e.g., Implement User Profile Page"
+    validations:
+      required: true
+
+  - type: select
+    id: project_section
+    attributes:
+      label: "Project/Section"
+      description: "Specify the relevant part of the project or the design section this task pertains to."
+      options:
+        - "UI Components"
+        - "Layout & Structure"
+        - "Interactions & Animations"
+        - "Backend Logic"
+        - "API Integration"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Task Description"
+      description: "Provide a clear and detailed description of what needs to be developed and the desired outcome."
+      placeholder: "Explain the task, its purpose, and any relevant background information."
+    validations:
+      required: true
+
+  - type: textarea
+    id: design_ui_elements
+    attributes:
+      label: "Design Specifications - UI Elements"
+      description: |
+        Provide detailed specifications for UI elements. Use the following format:
+
+        **Element:** [Specific UI element]
+        **Description:** [Detailed description of appearance and behavior]
+        **Visual Reference:** [Link to design mockups]
+      placeholder: |
+        **Element:** Button
+        **Description:** Primary call-to-action button with rounded corners.
+        **Visual Reference:** [Link to Figma design]
+    validations:
+      required: false
+
+  - type: textarea
+    id: design_layout_structure
+    attributes:
+      label: "Design Specifications - Layout & Structure"
+      description: |
+        Provide details on the layout and structure. Use the following format:
+
+        **Component/Screen:** [Name of the component or screen]
+        **Layout:** [Describe the overall arrangement]
+        **Grid System:** [Specify grid details]
+      placeholder: |
+        **Component/Screen:** User Profile Page
+        **Layout:** Two-column layout with user info on the left and activity feed on the right.
+        **Grid System:** 12-column grid, left column spans 4, right spans 8.
+    validations:
+      required: false
+
+  - type: textarea
+    id: design_interactions_animations
+    attributes:
+      label: "Design Specifications - Interactions & Animations"
+      description: |
+        Describe any specific interactions and animations. Use the following format:
+
+        **Interaction:** [Specific user interaction]
+        **Description:** [Detail the flow and behavior]
+        **Animation:** [Describe the animation details]
+        **Prototypes:** [Link to interactive prototypes]
+      placeholder: |
+        **Interaction:** Clicking the "Follow" button
+        **Description:** Updates the button state to "Following" and triggers a notification.
+        **Animation:** Button text fades out and "Following" fades in with a slight scale animation.
+        **Prototypes:** [Link to InVision prototype]
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: "Acceptance Criteria"
+      description: "Define specific and measurable criteria that must be met for this task to be considered complete."
+      placeholder: "- All UI elements match the design specifications.\n- The layout is implemented correctly across all specified breakpoints.\n- Interactions and animations function as described."
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_notes
+    attributes:
+      label: "Additional Notes"
+      description: "Include any other relevant information, context, or considerations for the developers."
+      placeholder: "e.g., Consider accessibility guidelines, specific API endpoints to use."
+    validations:
+      required: false
